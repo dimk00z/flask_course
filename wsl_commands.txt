@@ -6,9 +6,12 @@ sudo /etc/init.d/mysql start
 sudo mysql_secure_installation
 sudo mysql -u root -p
 create database test1 character set utf8 collate utf8_unicode_ci;
+CREATE USER 'test1'@'localhost' IDENTIFIED BY 'Test1P@ssw0rd';
+GRANT ALL PRIVILEGES ON test1.* TO 'test1'@'localhost';
 _____________________
 flask install
 touch {config,app,main,view}.py
 pip install flask
+pip install mysql-connector-python
 pip freeze>requirements.txt
 _____________________
