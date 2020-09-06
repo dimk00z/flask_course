@@ -6,9 +6,18 @@ Blueprint index page
 
 {% block content_title %}
 {{post.title}}
+
+
 {% endblock content_title %}
 {% block content %}
-<p>{{post.body}}</p>
-</ul>
+
+  <div class="row">
+    <div class="col">{% for tag in tags %}
+            <span class="badge badge-primary">{{tag.name}}</span>
+
+    {% endfor %}</div>
+    <div class="w-100"></div>
+    <div class="col"><p>{{post.body}}</p>
+</div>
 
 {% endblock content %}

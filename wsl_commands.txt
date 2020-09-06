@@ -15,3 +15,15 @@ pip install flask
 pip install mysql-connector-python
 pip freeze>requirements.txt
 _____________________
+migrations
+
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
+
+>>> from app import db
+>>> from models import Tag
+>>> tag = Tag(name='python')
+
+>>> db.session.add(tag)
+>>> db.session.commit()
