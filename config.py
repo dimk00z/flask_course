@@ -2,4 +2,4 @@ class Configuration(object):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://test1:Test1P@ssw0rd@localhost/test1'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SERVER_NAME = "192.168.33.61:5000"
+    SERVER_NAME = "172.22.65.255:5000"

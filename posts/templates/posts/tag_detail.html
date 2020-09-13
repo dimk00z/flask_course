@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{tag}} detail
+{% endblock title %}
+
+{% block content_title %}
+{{tag.name}}
+
+
+{% endblock content_title %}  
+{% block content %}
+<ul class="list-unstyled">
+    {% for post in posts %}
+    <li>
+
+        <a href="{{url_for('posts.post_detail', slug=post.slug)}}">{{post.title}}</a>
+    </li>
+
+    {% endfor %}
+</ul>
+
+{% endblock content %}
