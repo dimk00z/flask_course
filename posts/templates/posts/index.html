@@ -6,8 +6,12 @@ Blueprint index page
 
 {% block content_title %}
 Posts
+<a href="{{url_for('posts.create_post')}}">
+<button type="button" class="btn btn-primary">Create</button>
+</a>
 {% endblock content_title %}
 {% block content %}
+
 <ul class="list-unstyled">
     {% for post in posts %}
     <li>
